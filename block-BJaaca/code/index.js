@@ -6,9 +6,7 @@ let character = {};
 //  - Go to this [Arya Stark](https://awoiaf.westeros.org/index.php/Arya_Stark)
 
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
-  character = {
-    characterName : "Arya"
-  }
+  character["character-age"] = age;
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 let age = 20;
 character = {
@@ -48,9 +46,7 @@ character = {
 // - Execute the function stored in the greet key of the character object
 character.greet();
 //  - Change the method `greet` to now alert `She is [NAME HERE] and her title is [TITLE HERE]`.
-character.greet();{
-    {alert(`She is ${character.characterName} and her title is ${character.title}`)};
-}
+character.greet() = function(){{alert(`She is ${character.characterName} and her title is ${character.title}`)};}
 // - Check by calling `greet` and see if the message changed or not.
 
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
@@ -72,9 +68,7 @@ character = {
     greet : function greetFunc(){alert(`I am ${character.characterName} and my title is ${character.title}`)},
     isFemale : true,
     isAdult : age > 18 ? true : false,
-    changeIsAdult : function(){if(character.isAdult == true){
-                                    character.isAdult = false;}
-                                else{character.isAdult == true}}
+    changeIsAdult : function(){character.isAdult = !character.isAdult}
                 }
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
