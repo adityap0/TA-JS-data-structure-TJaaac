@@ -17,7 +17,7 @@ sum = sum + numbers[i];
 avg = sum/numbers.length;
 console.log(`Average is ${avg}`);
 // 4. Find the highest number in the array and print it to the console using console.log()
-let high=0;
+let high=numbers[0];
 for(let i=0; i<numbers.length; i++)
 {
 if (high<numbers[i])
@@ -28,16 +28,16 @@ else continue;
 }
 console.log(`The highest number is ${high}`);
 // 5. Find the lowest number in the array and print it to the console using console.log()
-// let low=0;
-// for(let i=0; i<numbers.length; i++)
-// {
-// if (low<numbers[i])
-// {
-//     low = numbers[i];
-// }
-// else continue;
-// }
-// console.log(`The lowest number is ${low}`);
+let low=numbers[0];
+for(let i=0; i<numbers.length; i++)
+{
+if (low>numbers[i])
+{
+    low = numbers[i];
+}
+else continue;
+}
+console.log(`The lowest number is ${low}`);
 // 6. Find the even numbers in the array and print them to the console using console.log()
 for(let i=0; i<numbers.length; i++)
 {
