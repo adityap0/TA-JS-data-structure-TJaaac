@@ -17,9 +17,9 @@ students[42] = 'The answer to the meaning of life'
 // 9. Using `console.log` print the value of key `42` from the `students` object
 console.log(students[42]);
 // 10. Check the length of object named `students`.
-
+console.log(students.length);
 // 11. Can you define a key of `let or var` in any object? Reason.
-// Yes we can, but then we will need to access it like students[var]
+students["let"] ="Any Value";
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
 console.log(students);
 delete students.isAdult;
