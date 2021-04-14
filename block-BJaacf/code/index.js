@@ -1,81 +1,156 @@
-// 1. Create an array named numbers and store 5 number values in it
-let numbers = [1,4,6,2,9];
-// 2. Calculate the sum of array items and print it to the console using console.log()
-let sum = 0;
-for(let i=0; i<numbers.length; i++)
-{
-sum = sum + numbers[i];
-console.log(sum);
-}
-console.log(sum);
-// 3. Calculate the average of array items and print it to the console using console.log()
-let avg=0
-for(let i=0; i<numbers.length; i++)
-{
-sum = sum + numbers[i];
-}
-avg = sum/numbers.length;
-console.log(`Average is ${avg}`);
-// 4. Find the highest number in the array and print it to the console using console.log()
-let high=numbers[0];
-for(let i=0; i<numbers.length; i++)
-{
-if (high<numbers[i])
-{
-    high =numbers[i];
-}
-else continue;
-}
-console.log(`The highest number is ${high}`);
-// 5. Find the lowest number in the array and print it to the console using console.log()
-let low=numbers[0];
-for(let i=0; i<numbers.length; i++)
-{
-if (low>numbers[i])
-{
-    low = numbers[i];
-}
-else continue;
-}
-console.log(`The lowest number is ${low}`);
-// 6. Find the even numbers in the array and print them to the console using console.log()
-for(let i=0; i<numbers.length; i++)
-{
-if (numbers[i]%2==0)
-{
-    console.log(numbers[i]);
-}
-else continue;
-}
-// 7. Find the odd numbers in the array and print them to the console using console.log()
-for(let i=0; i<numbers.length; i++)
-{
-if (numbers[i]%2!=0)
-{
-    console.log(numbers[i]);
-}
-else continue;
-}
-// 8. Find the numbers in the array that is divisible by 5 and print them to the console using console.log()
-for(let i=0; i<numbers.length; i++)
-{
-if (numbers[i]%5==0)
-{
-    console.log(numbers[i]);
-}
-else continue;
-}
-// 9. Log all the element of the array one by one
-// for(let i=0; i<numbers.length; i++)
-// {
-// console.log(numbers[i]);
-// }
-// 10. Find all the number in the array that is divisible by 3
-for(let i=0; i<numbers.length; i++)
-{
-if (numbers[i]%3==0)
-{
-    console.log(numbers[i]);
-}
-else continue;
-}
+let hat = {
+    size: 'large',
+    color: 'orange',
+  };
+  console.log(hat.size); // large
+
+  let hat = {
+    size: 'large',
+    color: 'orange',
+  };
+  console.log(hat['color']);
+  
+  // Output - orange
+
+  let hat = {
+    size: 'large',
+    color: 'orange',
+  };
+  
+  hat.color = 'red';
+  console.log(hat.color);
+  
+  // Output - red
+
+  let pen = {};
+pen.ink = 'blue';
+console.log(pen.ink);
+
+// Output - blue
+
+let hat = {
+    size: 'large',
+    color: 'orange',
+  };
+  
+  console.log(hat['cost']);
+  
+  // Output - undefined
+
+  let hat = {
+    rating: function () {
+      return 'Hat is top rated';
+    },
+    color: 'green',
+  };
+  console.log(hat.rating());
+  
+  // Output - 'Hat is top rated'
+
+  let hat = {
+    size: 'medium',
+    color: 'green',
+    introduction: function () {
+      return `The size of hat is ${hat.size} and color is ${hat.color}`;
+    },
+  };
+  hat.introduction();
+  
+  // Output - `The size of hat is medium and color is green`
+
+  let hat = {
+    rating: function () {
+      return 'Hat is top rated';
+    },
+    color: 'green',
+  };
+  console.log(hat.rating());
+  
+  // Output - Hat is top rated
+
+  let bucket = {
+    capacity: '5 Litre',
+    customerMessage: function (desiredSize) {
+      if (desiredSize > 5) {
+        return 'This bucket is not large enough for you';
+      }
+    },
+  };
+  console.log(bucket.customerMessage(13));
+  
+  // Output - This bucket is not large enough for you
+
+  function globalFunction() {
+    return 'I can be called anywhere';
+  }
+  let obj = {
+    func: globalFunction,
+  };
+  console.log(obj.func());
+  
+  // Output - I can be called anywhere.
+
+  let student = {
+    age: 21,
+    address: {
+      city: 'Dharamshala',
+      state: 'Himachal Pradesh',
+    },
+  };
+  console.log(student.address.city);
+  
+  // Output - Dharamshala
+
+  let student = {
+    age: 21,
+    address: {
+      city: 'Dharamshala',
+      state: 'Himachal Pradesh',
+    },
+  };
+  student.address.zip = '176057';
+  console.log(student.address.zip);
+  
+  // Output - 176057
+
+  let student = {
+    age: 21,
+    address: {
+      city: 'Dharamshala',
+      state: 'Himachal Pradesh',
+    },
+  };
+  console.log(student);
+  delete student.age;
+  console.log(student);
+  
+  // Output - 
+//   {age: 21, address: {…}}
+// address: {city: "Dharamshala", state: "Himachal Pradesh"}
+// __proto__: Object
+// VM239:10 
+// {address: {…}}
+// address: {city: "Dharamshala", state: "Himachal Pradesh"}
+// __proto__: Object
+
+var altcampus = {
+    batch16: {
+      totalStudents: '11',
+    },
+    batch15: {
+      totalStudents: '9',
+    },
+    batch14: {
+      totalStudents: '8',
+    },
+  };
+  console.log(altcampus.batch16.totalStudents);
+  
+  // Output - 11
+
+  var obj = {
+    name: 'Panther',
+  };
+  console.log('name' in obj);
+  
+  // Output - Error
