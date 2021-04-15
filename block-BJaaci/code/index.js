@@ -1,187 +1,80 @@
-let movies = [
-  {
-    id: '1',
-    title: 'Game Night',
-    year: '2018',
-    genres: ['Action', 'Comedy', 'Crime'],
-    releaseDate: '2018-02-28',
-    actors: ['Rachel McAdams', 'Jesse Plemons', 'Jason Bateman'],
-  },
-  {
-    id: '2',
-    title: 'Area X: Annihilation',
-    year: '2018',
-    genres: ['Adventure', 'Drama', 'Fantasy'],
-    releaseDate: '2018-02-23',
-    actors: ['Tessa Thompson', 'Jennifer Jason Leigh', 'Natalie Portman'],
-  },
-  {
-    id: '3',
-    title: 'Hannah',
-    year: '2017',
-    genres: ['Drama'],
-    releaseDate: '2018-01-24',
-    actors: ['Charlotte Rampling', 'Andr Wilms', 'Phanie Van Vyve'],
-  },
-];
+let x = 10;
+let y = 'Hello';
+let a = x;
+let b = y;
 
-/*
-Go through the variable named movies properly before solvinf the exercises.
-Use the variable named movies to solve the requirement below.
-*/
+// Value of x // 10
+// Value of y // 'Hello'
+// Value of a // 10
+// Value of b // 'Hello'
 
-// 1. Log the value of the title key in the first movie of the array named `movies`
-console.log(movies[0].title);
-// 2. Log the value of the title key in the last movie of the array named `movies`
-console.log(movies[2].title);
-// 3. Log the value of the title key in the second movie (index 1) of the array named `movies`
-console.log(movies[1].title);
-// 4. Log the value of the year key in the first movie of the array named `movies`
-console.log(movies[0].year);
-// 5. Log all the named of actors (key named actors) of the first movie
-for(let i =0;i<movies[0].actors.length; i++)
-{
-  console.log(movies[0].actors[i]);
-}
-// 6. Log the name of the first actor of the first movie
-console.log(movies[0].actors[0]);
-// 7. Log the name of the last actor of the first movie
-console.log(movies[0].actors[2]);
-// 8. Log the name of the second actor (index 1) of the first movie
-console.log(movies[1].actors[1]);
-// 9. Log the name of the second actor (index 1) of the second movie
-console.log(movies[1].actors[1]);
-// 10. Log the name of the last actor of the thrid movie
-console.log(movies[2].actors[2]);
-// 11. Log the name of the second actor (index 1) of the third movie
-console.log(movies[2].actors[1]);
-// 12. Log all the genres of the third movie
-for(let i =0;i<movies[2].genres.length; i++)
-{
-  console.log(movies[2].genres[i]);
-}
-// 13. Log all the genres of the first movie
-for(let i =0;i<movies[0].genres.length; i++)
-{
-  console.log(movies[0].genres[i]);
-}
-// 14. Log the first genres of the first movie
-console.log(movies[0].genres[0]);
-// 15. Log the first genres of the second movie
-console.log(movies[1].genres[0]);
-// 16. Log the last genres of the first movie (using the length property of array)
-console.log(movies[1].genres[0]);
-// 17. Log the first genres of the second movie (using the length property of array)
-console.log(movies[2].genres[0]);
-// 18. Log all the genres of the first movie one by one
-for(let i =0;i<movies[0].genres.length; i++)
-{
-  console.log(movies[0].genres[i]);
-}
-// 19. Log all the genres of the second movie one by one
-for(let i =0;i<movies[1].genres.length; i++)
-{
-  console.log(movies[1].genres[i]);
-}
-// 20. Log if the first actor of the first movie is `Rachel McAdams` or not (You have to log true or false)
-movies[0].actors[0] == "Rachel McAdams" ? true : false;
-// 21. Log if the second actor (index 1) of the second movie is `Natalie Portman` or not (You have to log true or false)
-movies[1].actors[1] == "Natalie Portman" ? true : false;
-// 22. Log if the year of all three movies is greater than `2017` or not one by one. (Log true or false)
-for(let i =0; i<movies.length; i++)
-{
-  if(movies[i].year > 2017)
-  {
-    console.log(true);
-  }
-  else console.log(false);;
-}
-// 23. Log the title of all three movies one by one.
-for(let i =0; i<movies.length; i++)
-{
-  console.log(title);
-}
-// 24. Log if the title of the first movie is `Hannah` or not
-movies[0].title == "Hannah" ? console.log(movies[0].title) : false;
-// 25. Log the number of actors in all three movies one by one
-let count = 0;
-for(let i =0; i<movies.length; i++)
-{
-  for(let z =0; z<movies[i].actors.length;z++)
-  {
-    if(movies[i].actors != null)
-    { 
-      count = count +1;
-    }
-  }
-  console.log(`The number of actors in the movie ${i+1} is : ${count}`);
-  count =0;
-}
-// 26. Log the number of genres in all three movies one by one
-let count = 0;
-for(let i =0; i<movies.length; i++)
-{
-  for(let z =0; z<movies[i].genres.length;z++)
-  {
-    if(movies[i].genres != null)
-    { 
-      count = count +1;
-    }
-  }
-  console.log(`The number of actors in the movie ${i+1} is : ${count}`);
-  count =0;
-}
-// 27. Log the name of all the movies with more than 1 genre
-let count = 0;
-for(let i =0; i<movies.length; i++)
-{
-  for(let z =0; z<movies[i].genres.length;z++)
-  {
-    if(movies[i].genres != null)
-    { 
-      count = count +1;
-    }
-  }
-  if(count!=0)
-  {console.log(`${movies[i].title} has ${count} genres`);}
-  count =0;
-}
-// 28. Log the name of all the movies with more than 1 actors
-let count = 0;
-for(let i =0; i<movies.length; i++)
-{
-  for(let z =0; z<movies[i].actors.length;z++)
-  {
-    if(movies[i].actors != null)
-    { 
-      count = count +1;
-    }
-  }
-  if(count!=0)
-  {console.log(`${movies[i].title} has ${count} actors`);}
-  count =0;
-}
-// 29. Log the name of all the movies with exactly 3 actors
-let count = 0;
-for(let i =0; i<movies.length; i++)
-{
-  for(let z =0; z<movies[i].actors.length;z++)
-  {
-    if(movies[i].actors != null)
-    { 
-      count = count +1;
-    }
-  }
-  if(count===3)
-  {console.log(`${movies[i].title} has ${count} actors`);}
-  count =0;
-}
-// 30. Log the name of all the movies with year `2018`
-for(let i =0; i<movies.length; i++)
-{
-  if(movies[i].year == "2018")
-  {
-    console.log(movies[i].title);
-  }
-  else continue;
-}
+
+var x = 10;
+var y = 'Hello';
+var a = x;
+var b = y;
+a = 5;
+b = 'test';
+
+// Value of x // 10
+// Value of y // 'Hello'
+// Value of a // 5
+// Value of b // 'test'
+
+var users = ['sam', 'aman'];
+var usersCopy = users;
+users.push('nathan');
+
+// Answer the following after looking at above code along with the reason:
+
+// Value of users // 'sam' , 'aman', 'nathan'
+// Value of usersCopy = 'sam', 'aman', 'nathan'
+// Length of the users variable , 3
+// Length of the usersCopy variable , 3
+
+let a = { language: 'Javascript' };
+let b = a;
+
+console.log(a); // 1
+console.log(b); // 2
+
+a.language = 'Python';
+
+console.log(a); // 3
+console.log(b); // 4
+
+// Answer the following after looking at above code along with the reason:
+
+// Output of 1 // language : 'Javascript'
+// Output of 2 // language : 'Javascript'
+// Output of 3 // language : 'Python'
+// Output of 4 // language : 'Python'
+
+
+let username = 'Arya';
+let usernameCopy = username;
+let userInfo = {
+  name: 'John',
+};
+let userCopy = userInfo;
+
+
+username == usernameCopy; // true
+username === usernameCopy; // true
+userInfo === userCopy; // true
+userInfo == userCopy; // true
+userInfo.name == userCopy.name; // true
+userInfo.name === userCopy.name; // true
+username == userInfo.name; // false
+
+var game = { game: 'Vollyball' };
+console.log(game === game);
+
+// Output - true
+
+var game = { title: 'Vollyball' };
+var sameGame = { title: 'Vollyball' };
+game = sameGame
+console.log(game === sameGame);
+
+// Output - false
