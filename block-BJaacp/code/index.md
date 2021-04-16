@@ -1,51 +1,68 @@
-1. What will be the output and explain the reason.
-
 ```js
-let obj = { name: 'Arya' };
-obj = { surname: 'Stark' };
-let newObj = { name: 'Arya' };
-let user = obj;
-let arr = ['Hi'];
-let arr2 = arr;
-```
-
-Answer the following with reason after going through the above code:
-
-- `[10] === [10]` // false
-- What is the value of obj? // obj = {surname:`Stark`}
-- `obj == newObj` // false
-- `obj === newObj` //false
-- `user === newObj` //false
-- `user == newObj` //false
-- `user == obj` //true
-- `arr == arr2` // true
-- `arr === arr2` // true
-
-2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
-
-<!-- To add this image here use ![name](./hello.jpg) -->
-
-```js
-function personDetails(person) {
-  person.age = 25;
-  person = { name: 'John', age: 50 };
-  return person;
-}
-var person1 = { name: 'Alex', age: 30 };
-var person2 = personDetails(person1);
-console.log(person1);
-console.log(person2);
-```
-
-3. What will be the output of the below code:
-
-```js
-var brothers = ['Bran', 'John'];
-var userx = {
-  name: 'Sansa',
+let brothers = ['John', 'Bran', 'Robb'];
+let house = 'Stark';
+let user = {
+  name: 'Arya',
+  house: house,
+  brothers: brothers,
 };
-userx.brothers = brothers;
-brothers.push('Robb');
-console.log(userx.brothers === brothers); //1. True
-console.log(userx.brothers.length === brothers.length); //2. True
+
+let user2 = {
+  name: 'Arya',
+  house: house,
+  brothers: brothers,
+};
+
+let user3 = {
+  name: 'Arya',
+  house: 'Stark',
+  brothers: ['John', 'Bran', 'Robb'],
+};
 ```
+user.house === user2.house; // true:
+user.house == user2.house; // true:
+user.brothers === user2.brothers; // true:
+user.brothers == user2.brothers; // true:
+user.name == user2.name; // true:
+user.name === user2.name; // true:
+user.brothers == user3.brothers; // output: false
+user.brothers === user3.brothers; // output: false
+user.house === user2.house; // true
+user.house === user3.house; // true
+user.brothers[0] === user2.brothers[0]; // true
+user.brothers[0] === user3.brothers[0]; // true
+
+```js
+let character = {
+  charactorName: 'Sansa',
+  sisters: 1,
+  brothers: 4,
+};
+let characterOne = character;
+let characterTwo = character;
+// Your code
+```
+character === characterOne; //true
+characterOne == characterTwo; //true
+characterTwo == character; //true
+```js
+let character = {
+  charactorName: 'Sansa',
+  sisters: 1,
+  brothers: 4,
+};
+let characterThree ={}
+characterThree.charactorName = character.charactorName;
+characterThree.sisters = character.sisters;
+characterThree.brothers = character.brothers;
+
+let characterFour ={}
+characterFour.charactorName = character.charactorName;
+characterFour.sisters = character.sisters;
+characterFour.brothers = character.brothers;
+
+// Your code
+```
+character === characterThree; //false
+characterThree == characterFour; //false
+characterFour == character; //false
